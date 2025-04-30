@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Suhu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header id="header">
+        <h1>Kalkulator Suhu</h1>
+    </header>
+
+    <!-- Content -->
+    <main id="container">
+
+        <div class="calc-body">
+
+            <p>
+                Masukkan suhu derajat Celsius (&deg;C) ke kotak dibawah,
+                lalu klik tombol konversi untuk mendapatkan hasil konversi
+                dalam bentuk Fahrenheit (&deg;F).
+            </p>
+
+            <form method="post" id="form-calc-suhu">
+
+                <div id="input-celsius">
+                    <label for="txt-input-celsius">Celsius (&deg;C)</label>
+                    <input type="number" name="txt-input-celsius" id="txt-input-celsius">
+                </div>
+
+                <div id="btn-group">
+                    <button id="convert" class="btn">Konversi</button>
+                    <button id="reset" class="btn">Reset</button>
+                    <button id="reverse" class="btn">Reverse</button>
+                </div>
+
+                <div id="input-fahrenheit">
+                    <label for="txt-input-fahrenheit">Fahrenheit (&deg;F)</label>
+                    <input type="number" name="txt-input-fahrenheit" id="txt-input-fahrenheit" disabled>
+                </div>
+
+                <div id="calc-method">
+                    <label for="txt-calc-method">Cara kalkulasi</label>
+                    <textarea name="txt-calc-method" id="txt-calc-method" rows="5" disabled></textarea>
+                </div>
+
+            </form>
+
+            <div id="trivia-section">
+
+                <div id="suhu-explanation" class="trivia-title">
+                    <div class="title">
+                        <i class="arrow">&#11208;</i>
+                        <h2>Apa itu suhu?</h2>
+                    </div>
+                    <div class="body">
+                        <p>
+                            Suhu adalah sebuah ukuran dingin atau panas dari suatu kondisi atau suatu hal lain.
+                            Suhu juga dapat ditetapkan sebagai ukuran energi kinetik rata-rata dari sebuah molekul pada suatu objek,
+                            sehingga apabila suatu objek memiliki temperatur tinggi tentunya energi kinetik rata-rata juga besar.
+                            Satuan ukur dari suhu yang paling umum digunakan di Indonesia adalah Celsius, sementara beberapa negara
+                            menggunakan suhu Fahrenheit sebagai satuan ukur.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="convert-formula-celsius" class="trivia-title">
+                    <div class="formula-title title">
+                        <i class="arrow">&#11208;</i>
+                        <h2>Cara konversi dari Celsius (&deg;C) ke Fahrenheit (&deg;F)</h2>
+                    </div>
+                    <div class="formula-body body">
+                        <p>
+                            Suhu <span class="suhu-marker">S</span> dalam derajat Fahrenheit (&deg;F) 
+                            sama dengan suhu <span class="suhu-marker">S</span> dalam derajat Celsius (&deg;F)
+                            kali (9/5) tambah 32.
+                        </p>
+                        <p class="first-conversion-formula">
+                            <span class="suhu-marker">S</span><sub>(&deg;F)</sub> = (<span class="suhu-marker">S</span><sub>(&deg;C)</sub> x 9/5) + 32
+                        </p>
+                        <p>Atau</p>
+                        <p class="second-conversion-formula">
+                            <span class="suhu-marker">S</span><sub>(&deg;F)</sub> = (<span class="suhu-marker">S</span><sub>(&deg;C)</sub> x 1.8) + 32
+                        </p>
+                    </div>
+                </div>
+
+                <div id="convert-formula-fahrenheit" class="trivia-title">
+                    <div class="formula-title title">
+                        <i class="arrow">&#11208;</i>
+                        <h2>Cara konversi dari Fahrenheit (&deg;F) ke Celsius (&deg;C)</h2>
+                    </div>
+                    <div class="formula-body body">
+                        <p>
+                            Suhu <span class="suhu-marker">S</span> dalam derajat Celsius (&deg;C)
+                            sama dengan suhu <span class="suhu-marker">S</span> dalam derajat Fahrenheit (&deg;F)
+                            dikurangi 32 dan dikali 5/9.
+                        </p>
+                        <p class="first-conversion-formula">
+                            <span class="suhu-marker">S</span><sub>(&deg;C)</sub> = (<span class="suhu-marker">S</span><sub>(&deg;F) </sub> - 32) x 5/9
+                        </p>
+                        <p>Atau</p>
+                        <p class="first-conversion-formula">
+                            <span class="suhu-marker">S</span><sub>(&deg;C)</sub> = (<span class="suhu-marker">S</span><sub>(&deg;F) </sub> - 32) x 0.56
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <div id="alert-domain"></div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2025 Bagoes Ihsan Taufiqurrahman</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
